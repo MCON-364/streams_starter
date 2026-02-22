@@ -125,8 +125,9 @@ class StreamExerciseTest {
     void testGetFailingStudents() {
         List<String> failing = exercise.getFailingStudents(70);
         assertNotNull(failing);
-        assertEquals(1, failing.size());
+        assertEquals(2, failing.size());
         assertTrue(failing.contains("Frank"));
+        assertTrue(failing.contains("David"));
     }
     
     @Test
@@ -178,7 +179,7 @@ class StreamExerciseTest {
     void testCalculateClassAverage() {
         double avg = exercise.calculateClassAverage();
         if (avg > 0) {
-            assertEquals(80.625, avg, 0.01);
+            assertEquals(81.275, avg, 0.01);
         }
     }
 }
